@@ -6,7 +6,7 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-  api.versionsFrom('METEOR@1.1.6');
+  api.versionsFrom('METEOR@1.1.0.2');
 
   api.use([
     'iron:router'
