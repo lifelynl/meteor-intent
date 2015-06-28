@@ -58,3 +58,20 @@ Router.route('/articles/:_id', {
     }
 });
 
+Router.onBeforeAction(function() {
+    var next = this.next;
+
+    if (Meteor.user()) {
+        next();
+    } else {
+        Intent.go({route: 'login'}, function(user) {
+            if (user) next();
+            else this.back();
+        }, {prevent_going_back: true});
+    }
+}, {
+    where: 'client',
+    only: [
+        'new-article'
+    ]
+});
