@@ -1,3 +1,4 @@
 Intent.configure({
-    default_route_name: 'home'
+    default_route_name: 'home',
+    debug: true
 });
