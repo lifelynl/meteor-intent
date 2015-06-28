@@ -4,7 +4,7 @@
         <p>Down here I'll describe some example cases. You can test them out on this website.</p>
     </header>
     <div class="row">
-        {{#each examples }}
+        {{#each cases }}
             <div class="col-sm-6">
                 <section class="panel panel-default">
                     <header class="panel-heading">
@@ -12,6 +12,11 @@
                     </header>
                     <section class="panel-body">
                         <p>{{ description }}</p>
+                        <ul>
+                            {{#each steps}}
+                                <li>{{ . }}</li>
+                            {{/each}}
+                        </ul>
                     </section>
                 </section>
             </div>
