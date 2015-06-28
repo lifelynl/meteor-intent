@@ -27,6 +27,16 @@ Template.home.helpers({
                 ]
             },
             {
+                title: 'Restricted routes',
+                description: 'When a route isn\'t accessible by an anonymous user, you\'ll probably want to let the user log in.',
+                steps: [
+                    'Log out if you\'re logged in',
+                    'Go to Articles > Create new article',
+                    'Login (register if necessary)',
+                    'There\'s your page!'
+                ]
+            },
+            {
                 title: 'Deeply inherited intents',
                 description: 'Even when the user is far away from his initial action, the user should always be brought back and the action should always be completed.',
                 steps: [
