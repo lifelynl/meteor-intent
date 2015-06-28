@@ -7,8 +7,10 @@
 meteor-platform
 reactive-dict
 reactive-var
+reywood:publish-composite
 twbs:bootstrap
 iron:router
 zimme:active-route
+accounts-password
 
 lifelynl:intent

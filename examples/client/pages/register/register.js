@@ -10,10 +10,15 @@ Template.register.events({
             profile: {
                 name: form.elements.name.value
             }
-        }, function(error, user) {
+        }, function(error) {
+
+            if (error) {
+                alert('An error occured while creating an account. Please check the form.')
+                return;
+            }
 
             Intent.return('register', {
-                arguments: [user]
+                arguments: [Meteor.user()]
             });
 
         });

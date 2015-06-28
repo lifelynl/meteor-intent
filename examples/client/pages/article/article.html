@@ -17,8 +17,13 @@
         <ul class="list-group">
             {{#each comments }}
                 <li class="list-group-item">
-                    <strong>{{ username }}</strong> wrote:<br>
-                    {{ comment }}
+                    {{#with commentUser }}
+                        <strong>{{ profile.name }}</strong> wrote:<br>
+                    {{else }}
+                        <strong>Anonymous</strong> wrote:<br>
+                    {{/with }}
+
+                    {{ content }}
                 </li>
             {{/each }}
         </ul>

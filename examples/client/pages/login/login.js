@@ -28,14 +28,14 @@ Template.login.events({
         var email = form.elements.email.value;
         var password = form.elements.password.value;
 
-        Meteor.loginWithPassword(email, password, function(error, user) {
+        Meteor.loginWithPassword(email, password, function(error) {
             if (error) {
-                template.error.set('This user does not exist');
+                template.error.set('This user does not exist or the password was wrong');
                 return;
             };
 
             Intent.return('login', {
-                arguments: [user]
+                arguments: [Meteor.user()]
             });
         });
     }
