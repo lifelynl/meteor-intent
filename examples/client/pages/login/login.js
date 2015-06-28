@@ -14,8 +14,13 @@ Template.login.events({
             event.preventDefault();
 
             Intent.go({route: 'register'}, function(user) {
-                if (user) Intent.return('login');
-                else this.back();
+                if (user) {
+                        Intent.return('login', {
+                        arguments: [user]
+                    });
+                } else {
+                    this.back();
+                }
             }, {prevent_going_back: true});
         }
     },
