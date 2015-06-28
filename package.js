@@ -6,11 +6,15 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-  // api.versionsFrom('METEOR@0.9.2');
+  api.versionsFrom('METEOR@1.1.6');
+
+  api.use([
+    'iron:router'
+  ], 'client');
 
   api.add_files([
     'lib/intent.js'
-  ]);
+  ], 'client');
 
   api.export('Intent');
 });
