@@ -20,6 +20,7 @@ if (Meteor.isClient) {
     * Configure the fallback route
     */
     Intent.configure({
+        debug: true,
         fallback_route_name: 'home'
     });
 
@@ -51,19 +52,17 @@ if (Meteor.isClient) {
             if (!Session.get('user')) {
                 Intent.go({
                     route: 'login'
-                }, function(back) {
+                }, function() {
 
-                    // This will be executed when the user comes back from the login page
                     if (Session.get('user')) {
                         Session.set('action_performed', true);
                     }
 
-                    // Here, back() is an alias for Intent.back('login');
-                    back();
                 });
+            } else {
+                Session.set('action_performed', true);
             }
 
-            Session.set('action_performed', true);
         },
         'click #reset-action': function(event, template) {
             event.preventDefault();
@@ -83,7 +82,6 @@ if (Meteor.isClient) {
             event.preventDefault();
             Session.set('user', true);
 
-            // This will execute the callback we passed to Intent.go()
             Intent.return('login');
         }
     });
