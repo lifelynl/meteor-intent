@@ -37,6 +37,12 @@ Router.route('/articles', {
     }
 });
 
+Router.route('/articles/new', {
+    name: 'new-article',
+    where: 'client',
+    template: 'new_article'
+});
+
 Router.route('/articles/:_id', {
     name: 'article',
     where: 'client',
