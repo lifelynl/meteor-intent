@@ -13,7 +13,8 @@ Meteor.methods({
         return Articles.insert({
             title: article.title,
             abstract: article.abstract,
-            paragraphs: article.paragraphs
+            paragraphs: article.paragraphs,
+            created_at: new Date()
         });
     },
 
@@ -30,7 +31,8 @@ Meteor.methods({
         return Comments.insert({
             user_id: user._id,
             article_id: article._id,
-            content: comment
+            content: comment,
+            created_at: new Date()
         });
     }
 
