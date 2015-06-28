@@ -9,16 +9,22 @@ Template.login.helpers({
 });
 
 Template.login.events({
-    'click #registerButton': function() {
+    'click #registerButton': function(event) {
         if (Intent.exists('login')) {
             event.preventDefault();
 
             Intent.go({route: 'register'}, function(user) {
-                if (user) {
-                    Intent.return('login');
-                }
-            });
+                if (user) Intent.return('login');
+                else this.back();
+            }, {prevent_going_back: true});
         }
+    },
+    'click #cancelButton': function(event) {
+        event.preventDefault();
+
+        Intent.return('login', {
+            arguments: [false]
+        });
     },
     'submit #loginForm': function(event, template) {
         event.preventDefault();

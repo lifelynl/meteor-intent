@@ -1,4 +1,13 @@
 Template.register.events({
+
+    'click #cancelButton': function(event) {
+        event.preventDefault();
+
+        Intent.return('register', {
+            arguments: [false]
+        });
+    },
+
     'submit #registerForm': function(event, template) {
         event.preventDefault();
 
@@ -23,4 +32,5 @@ Template.register.events({
 
         });
     }
+
 });
