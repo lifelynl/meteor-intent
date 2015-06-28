@@ -5,8 +5,11 @@ Template.new_article.events({
         var form = event.currentTarget;
         var article = {
             title: form.elements.title.value,
-            abstract: "",
-            paragraphs: [],
+            abstract: form.elements.abstract.value,
+            paragraphs: [
+                form.elements.paragraph1.value,
+                form.elements.paragraph2.value,
+            ],
         };
 
         var persist = function() {
