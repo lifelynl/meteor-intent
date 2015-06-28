@@ -1,6 +1,3 @@
-/**
-* Routes
-*/
 Router.configure({
     layoutTemplate: 'main'
 });
@@ -32,7 +29,7 @@ Router.route('/articles', {
     },
     data: function() {
         return {
-            articles: Articles.find()
+            articles: Articles.find({}, {sort: {created_at: -1}})
         };
     }
 });
@@ -53,7 +50,7 @@ Router.route('/articles/:_id', {
     data: function() {
         return {
             article: Articles.findOne(this.params._id),
-            comments: Comments.find({article_id: this.params._id})
+            comments: Comments.find({article_id: this.params._id}, {sort: {created_at: 1}})
         };
     }
 });
