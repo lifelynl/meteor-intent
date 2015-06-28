@@ -5,5 +5,10 @@
 # but you can also edit it by hand.
 
 meteor-platform
-lifelynl:intent
+reactive-dict
+reactive-var
+twbs:bootstrap
 iron:router
+zimme:active-route
+
+lifelynl:intent

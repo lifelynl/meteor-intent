@@ -1,0 +1,17 @@
+<template name="articles">
+    <header class="page-header">
+        <h1>Articles</h1>
+    </header>
+    <div class="row">
+        <div class="col-sm-6">
+            {{#each articles}}
+                <div class="list-group">
+                    <a href="{{ pathFor 'article' id=id }}" class="list-group-item">
+                        <h4 class="list-group-item-heading">{{ title }}</h4>
+                        <p class="list-group-item-text">{{ abstract }}</p>
+                    </a>
+                </div>
+            {{/each }}
+        </div>
+    </div>
+</template>

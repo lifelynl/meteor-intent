@@ -1,0 +1,21 @@
+<template name="login">
+
+    <header class="page-header">
+        <h1>User login</h1>
+        <p>If you don't have an account, please <a id="registerButton" href="{{ pathFor 'register' }}">register</a> first.</p>
+    </header>
+
+    <form id="loginForm">
+        <div class="form-group {{#if error }}has-error{{/if }}">
+            <label for="loginEmailInput1">Email address</label>
+            <input type="text" name="email" class="form-control" id="loginEmailInput1" placeholder="Your email address" autocomplete="off">
+            {{#with error}}<span class="form-error">{{ . }}</span>{{/with}}
+        </div>
+        <div class="form-group">
+            <label for="loginPasswordInput1">Password</label>
+            <input type="password" name="password" class="form-control" id="loginPasswordInput1" placeholder="Your password" autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+</template>

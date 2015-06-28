@@ -1,0 +1,36 @@
+<template name="article">
+
+    <header class="page-header">
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.abstract }}</p>
+    </header>
+
+    {{#each article.paragraphs }}
+        <p>{{ . }}</p>
+    {{/each }}
+
+    <footer>
+        <div class="page-header">
+            <h3>Comments</h3>
+        </div>
+
+        <ul class="list-group">
+            {{#each comments }}
+                <li class="list-group-item">
+                    <strong>{{ username }}</strong> wrote:<br>
+                    {{ comment }}
+                </li>
+            {{/each }}
+        </ul>
+
+        <form id="commentForm" class="well">
+            <div class="form-group">
+                <label for="commentCommentInput1">Comment</label>
+                <textarea name="comment" class="form-control" id="commentCommentInput1" placeholder="Your comment" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Post</button>
+        </form>
+
+    </footer>
+
+</template>
