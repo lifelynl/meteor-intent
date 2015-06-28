@@ -1,7 +1,6 @@
 Template.article.helpers({
     commentUser: function() {
-        var userId = this.user_id;
-        return Meteor.users.findOne(userId);
+        return Meteor.users.findOne(this.user_id);
     }
 });
 
