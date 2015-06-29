@@ -1,3 +1,5 @@
+# API
+
 ## Intent : <code>object</code>
 View [repository](https://github.com/lifelynl/meteor-intent) or [documentation](https://github.com/lifelynl/meteor-intent/wiki)
 
