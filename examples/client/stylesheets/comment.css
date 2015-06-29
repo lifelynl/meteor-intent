@@ -1,0 +1,13 @@
+@-webkit-keyframes highlight {
+    from { background-color: transparent; }
+    to { background-color: #c4d1dc; }
+}
+
+@keyframes highlight {
+    from { background-color: transparent; }
+    to { background-color: #c4d1dc; }
+}
+
+.comment-highlight {
+    -webkit-animation: highlight .4s ease 2 alternate;
+}

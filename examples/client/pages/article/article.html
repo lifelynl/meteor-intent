@@ -16,7 +16,7 @@
 
         <ul class="list-group">
             {{#each comments }}
-                <li class="list-group-item">
+                <li class="list-group-item" id="comment-{{ _id }}">
                     {{#with commentUser }}
                         <strong>{{ profile.name }}</strong> wrote:<br>
                     {{else }}
