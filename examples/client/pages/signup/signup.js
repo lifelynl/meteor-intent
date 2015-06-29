@@ -1,10 +1,10 @@
-Template.register.events({
+Template.signup.events({
     'click #cancelButton': function(event) {
         event.preventDefault();
 
-        Intent.return('register');
+        Intent.return('signup');
     },
-    'submit #registerForm': function(event, template) {
+    'submit #signupForm': function(event, template) {
         event.preventDefault();
 
         var form = event.currentTarget;
@@ -22,7 +22,7 @@ Template.register.events({
                 return;
             }
 
-            Intent.return('register', {
+            Intent.return('signup', {
                 arguments: [Meteor.user()]
             });
 

@@ -14,10 +14,10 @@ Router.route('/login', {
     template: 'login'
 });
 
-Router.route('/register', {
-    name: 'register',
+Router.route('/signup', {
+    name: 'signup',
     where: 'client',
-    template: 'register'
+    template: 'signup'
 });
 
 Router.route('/articles', {

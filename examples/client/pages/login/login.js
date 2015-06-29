@@ -9,11 +9,11 @@ Template.login.helpers({
 });
 
 Template.login.events({
-    'click #registerButton': function(event) {
+    'click #signupButton': function(event) {
         if (Intent.exists('login')) {
             event.preventDefault();
 
-            Intent.go({route: 'register'}, function(user) {
+            Intent.go({route: 'signup'}, function(user) {
                 if (user) {
                     Intent.return('login', {
                         arguments: [user]

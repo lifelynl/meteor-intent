@@ -11,7 +11,7 @@ Template.home.helpers({
                     'Log out if you\'re logged in',
                     'Go to Articles',
                     'Click login',
-                    'Login (register if necessary)',
+                    'Login (signup if necessary)',
                     'You\'re back at the Articles page!'
                 ]
             },
@@ -32,7 +32,7 @@ Template.home.helpers({
                 steps: [
                     'Log out if you\'re logged in',
                     'Go to Articles > Create new article',
-                    'Login (register if necessary)',
+                    'Login (signup if necessary)',
                     'There\'s your page!'
                 ]
             },
@@ -43,7 +43,7 @@ Template.home.helpers({
                     'Log out if you\'re logged in',
                     'Go to Articles > About the Meteor meetup at Lifely',
                     'Add a comment',
-                    'Click register',
+                    'Click signup',
                     'Create an account',
                     'There\'s your comment!'
                 ]

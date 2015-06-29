@@ -1,0 +1,35 @@
+<template name="signup">
+
+    <header class="page-header">
+        <h1 class="h2">Create an account</h1>
+        <p>If you already have an account, please <a href="{{ pathFor 'login' }}">login</a>.</p>
+    </header>
+
+    <form id="signupForm">
+        <div class="form-group">
+            <label for="signupNameInput1">Full name</label>
+            <input type="text" name="name" class="form-control" id="signupNameInput1" placeholder="Your full name">
+        </div>
+        <div class="form-group">
+            <label for="signupEmailInput1">Email address</label>
+            <input type="text" name="email" class="form-control" id="signupEmailInput1" placeholder="Your email address">
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="signupPasswordInput1">Password</label>
+                    <input type="password" name="password" class="form-control" id="signupPasswordInput1" placeholder="Your password">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="signupConfirmPasswordInput1">Repeat password</label>
+                    <input type="password" name="password_confirm" class="form-control" id="signupConfirmPasswordInput1" placeholder="Confirm password">
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Create account</button>
+        <button type="button" id="cancelButton" class="btn btn-default">Cancel</button>
+    </form>
+
+</template>
