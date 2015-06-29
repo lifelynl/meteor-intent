@@ -15,7 +15,7 @@ Template.login.events({
 
             Intent.go({route: 'register'}, function(user) {
                 if (user) {
-                        Intent.return('login', {
+                    Intent.return('login', {
                         arguments: [user]
                     });
                 } else {
