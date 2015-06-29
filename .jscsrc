@@ -1,0 +1,8 @@
+{
+    "preset": "google",
+    "requireCurlyBraces": false,
+    "validateIndentation": 4,
+    "requireCamelCaseOrUpperCaseIdentifiers": false,
+    "maximumLineLength": false,
+    "requireSemicolons": true
+}
