@@ -24,5 +24,4 @@ Package.on_test(function (api) {
   api.use('tinytest');
 
   // api.add_files('test/test.js');
-  api.add_files('test/route_test.js');
 });
