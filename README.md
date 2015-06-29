@@ -5,7 +5,7 @@ Intent lets your [Meteor](https://github.com/meteor/meteor) application remind a
 ## Prerequisites
 
 - `meteor-platform` (obviously)
-- `iron:router` or `meteorhacks:flow-router`
+- `iron:router`
 
 ## Installation
 
