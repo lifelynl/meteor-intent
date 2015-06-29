@@ -9,7 +9,7 @@ Package.on_use(function (api) {
   api.versionsFrom('METEOR@1.1.0.2');
 
   api.use([
-    'iron:router'
+    'iron:router@1.0.9'
   ], 'client');
 
   api.add_files([
