@@ -12,7 +12,7 @@ Template.new_article.events({
             ],
         };
 
-        var persist = function() {
+        var proceed = function() {
             Meteor.call('articles.insert', article, function(error, articleId) {
                 Router.go('article', {_id: articleId});
             });
@@ -25,11 +25,11 @@ Template.new_article.events({
                 route: 'login'
             }, function(user) {
                 if (!user) return;
-                persist();
+                proceed();
             });
 
         } else {
-            persist();
+            proceed();
         }
 
     }

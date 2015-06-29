@@ -11,7 +11,7 @@ Template.article.events({
         var form = event.currentTarget;
         var comment = form.elements.comment.value;
 
-        var persist = function() {
+        var proceed = function() {
             Meteor.call('articles.comment', template.data.article._id, comment);
             form.reset();
         };
@@ -22,11 +22,11 @@ Template.article.events({
                 route: 'login'
             }, function(user) {
                 if (!user) return;
-                persist();
+                proceed();
             });
 
         } else {
-            persist();
+            proceed();
         }
 
     }
