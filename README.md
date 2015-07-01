@@ -1,4 +1,5 @@
 # Meteor Intent Package
+[![LICENSE](http://img.shields.io/badge/LICENSE-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![meteor package version](http://img.shields.io/badge/atmosphere-1.0.0-brightgreen.svg)](https://atmospherejs.com/lifelynl/intent)
 
 Intent lets your [Meteor](https://github.com/meteor/meteor) application remind a user's initial action or page over several route changes (client-side only). Designed for use with [iron:router](https://github.com/iron-meteor/iron-router).
 
