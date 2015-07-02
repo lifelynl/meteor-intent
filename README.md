@@ -3,6 +3,9 @@
 
 Intent lets your [Meteor](https://github.com/meteor/meteor) application remind a user's initial action or page over several route changes (client-side only). Designed for use with [iron:router](https://github.com/iron-meteor/iron-router).
 
+## Presentation slides
+Slides.com: http://slides.com/jessedvrs/lifely-meteor-intent
+
 ## Prerequisites
 
 - `meteor-platform` (obviously)
