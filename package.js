@@ -1,7 +1,7 @@
 Package.describe({
   name: 'lifelynl:intent',
   summary: 'Intention system for your application routing',
-  version: "1.0.0",
+  version: "1.0.1",
   git: "https://github.com/lifelynl/meteor-intent"
 });
 
